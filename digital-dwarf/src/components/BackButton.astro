@@ -1,0 +1,33 @@
+---
+---
+
+<button>
+  <a href="javascript:history.back()">
+    <!-- line arrow -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left">
+      <line x1="19" y1="12" x2="5" y2="12"></line>
+      <polyline points="12 5 5 12 12 19"></polyline>
+    </svg>
+  </a>
+</button>
+
+<style>
+  button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  button a {
+    text-decoration: none;
+    color: var(--black);
+  }
+  button:hover a {
+    color: var(--accent);
+  }
+  
+  button svg {
+    width: 24px;
+    height: 24px;
+    transition: 0.2s ease;
+  }
+</style>

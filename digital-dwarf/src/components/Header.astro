@@ -17,13 +17,33 @@ import GithubLink from './GithubLink.astro';
 		</div>
 	</nav>
 </header>
+
 <style>
 	header {
 		margin: 0;
 		padding: 0 1em;
-		background: white;
+		background: rgba(var(--white));
 		box-shadow: 0 2px 8px rgba(var(--black), 5%);
+		
+		position: sticky;
+		top: 0;
+		z-index: 100;
 	}
+
+	/* 뒷배경 투명 */
+	header::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: rgba(var(--white), 0.5);
+		z-index: -1;
+		/* 뒤가 흐릿하게 보이게 하는 효과 */
+		backdrop-filter: blur(10px);
+	}
+
 	h2 {
 		margin: 0;
 		font-size: 1em;
@@ -58,3 +78,7 @@ import GithubLink from './GithubLink.astro';
 		}
 	}
 </style>
+
+<script>
+	
+</script>

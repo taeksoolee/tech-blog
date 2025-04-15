@@ -23,11 +23,13 @@ const getLink = (id: string) =>
     data.map((post) => (
       <li>
         <a href={getLink(post.id)}>
-          <img width={720} height={360} src={post.data.heroImage} alt="" />
-          <h4 class="title">{post.data.title}</h4>
-          <p class="date">
-            <FormattedDate date={post.data.pubDate} />
-          </p>
+          <div>
+            <h1 class="title">{post.data.title}</h1>
+            <p class="date">
+              <FormattedDate date={post.data.pubDate} />
+            </p>
+          </div>
+          <img width={720} height={360} src={post.data.heroImage} alt={post.data.title}>
         </a>
       </li>
     ))
@@ -35,9 +37,6 @@ const getLink = (id: string) =>
 </ul>
 
 <style>
-  main {
-    width: 960px;
-  }
   ul {
     display: flex;
     flex-wrap: wrap;
@@ -55,38 +54,54 @@ const getLink = (id: string) =>
   }
   ul li:first-child {
     width: 100%;
-    margin-bottom: 1rem;
     text-align: center;
   }
   ul li:first-child img {
     width: 100%;
   }
   ul li:first-child .title {
-    font-size: 2.369rem;
+    font-size: 1.5rem;
   }
   ul li img {
-    margin-bottom: 0.5rem;
     border-radius: 12px;
   }
   ul li a {
     display: block;
+    position: relative;
   }
   .title {
     margin: 0;
-    color: rgb(var(--black));
-    line-height: 1;
+    margin-bottom: 0.2rem;
+    color: rgb(var(--white));
   }
   .date {
     margin: 0;
-    color: rgb(var(--gray));
+    color: rgb(var(--white));
+    font-size: 0.8rem;
   }
-  ul li a:hover h4,
+  ul li a:hover h1 ,
   ul li a:hover .date {
-    color: rgb(var(--accent));
+    transform: translateY(-2px);
+    // color: rgb(var(--accent));
   }
   ul a:hover img {
-    box-shadow: var(--box-shadow);
+    /* box-shadow: var(--box-shadow); */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
+
+  div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   @media (max-width: 720px) {
     ul {
       gap: 0.5em;
@@ -99,7 +114,7 @@ const getLink = (id: string) =>
       margin-bottom: 0;
     }
     ul li:first-child .title {
-      font-size: 1.563em;
+      font-size: 1.2rem;
     }
   }
 </style>
