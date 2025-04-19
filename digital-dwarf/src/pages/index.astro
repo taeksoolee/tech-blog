@@ -1,49 +1,42 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <h1>안녕하세요 FE 개발자 이택수 입니다.</h1>
+      <p>
+        저는 현재 <code>프론트엔드 개발자</code>로 일하고 있으며,
+        <code>React</code>, <code>Vue</code> 를 사용하여 웹사이트를 개발하고 있습니다.
+      </p>
+      <p>
+        <a href="https://taeksoolee.github.io">개인 페이지</a>를 운영하고 있으니
+        관심있으신 분은 방문해주세요 😄
+      </p>
+      <p>
+        또 관심있는 기술로는 <code>Next.js</code>, <code>Astro</code>, <code
+          >Node.js</code
+        >, <code>Express</code>, <code>GraphQL</code>, <code>AWS</code> 등이 있고,
+        최근에는 <code>Bun</code> 이나 <code>hono</code>
+        <code>elysia</code>
+        <code>HTMX</code> 같은 개로운 생태계의 새로운 기술들에도 관심을 가지고 있습니다
+        🔥
+      </p>
+      <p>
+        이 블로그는 점진적으로 개발하려고 생각하고 있어, 고견 있으신 분들은 <a
+          href="mailto:leets1490@gmail.com">leets1490@gmail.com</a
+        >로 말씀 주시면 대단히 감사하겠습니다 🙇‍♂️
+      </p>
+    </main>
+    <Footer />
+  </body>
 </html>
